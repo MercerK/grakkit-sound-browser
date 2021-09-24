@@ -119,10 +119,20 @@ interface ItemFlags {
   pitch?: number
 }
 
-export class SoundViewer {
+/**
+ * SoundBrowser is a simple implementation showcasing a list of sounds inside
+ * an GUI for Minecraft. This will allow you to play any sound at any pitch.
+ *
+ * To initialize, make sure to import SoundBrowser and run
+ * `SoundBrowser.initialize()`.
+ */
+export class SoundBrowser {
   static isActive: boolean = false
   static isPlaying: boolean = false
 
+  /**
+   * This will initialize the SoundViewer by initializing associated commands and events.
+   */
   static initialize = () => {
     this.initializeCommands()
     this.initializeEvents()
@@ -131,7 +141,7 @@ export class SoundViewer {
 
   private static initializeCommands = () => {
     core.command({
-      name: 'soundlibrary',
+      name: 'soundbrowser',
       execute: (sender, filterString = '') => {
         if (sender.getName() === 'CONSOLE') return
 

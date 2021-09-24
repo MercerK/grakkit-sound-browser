@@ -9,14 +9,14 @@
     "module": "CommonJS",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
-    "rootDir": "./",
+    "rootDir": "./src",
     "skipLibCheck": true,
     "target": "es2020",
-    "watch": true,
-    "outDir": "/dist"
+    "watch": false,
+    "outDir": "./dist"
   },
   "include": [
-    "src/**/*"
+    "./src/**/*"
   ],
   "exclude": [
     "node_modules"

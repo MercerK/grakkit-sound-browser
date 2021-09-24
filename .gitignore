@@ -4,3 +4,5 @@ dist
 .env
 dnc
 dnc.*
+tsconfig.tsbuildinfo
+*.tgz

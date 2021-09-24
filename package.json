@@ -1,12 +1,13 @@
 {
   "name": "grakkit-sound-browser",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "webpack --env production",
-    "build:types": "npx tsc --noEmit --declaration --watch=false",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "tsc",
+    "postinstall": "tsc"
   },
   "dependencies": {
     "@grakkit/stdlib-paper": "^1.0.12",
